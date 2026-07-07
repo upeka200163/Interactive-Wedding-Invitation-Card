@@ -1,0 +1,483 @@
+/* Reset basic properties */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0f172a; 
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* --- PREMIUM MAROON & GOLD ENVELOPE STRUCTURE --- */
+.frame {
+    width: 600px;
+    height: 350px;
+    position: relative;
+    background: #06143a; /* Luxury Maroon Background */
+    border-radius: 0 0 35px 35px;
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.6), 
+                inset 0 -10px 20px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    border: 1px solid rgba(252, 246, 186, 0.2);
+}
+
+/* Beautiful Rounded Golden Open Button */
+#button_open_envelope {
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    z-index: 550;
+    top: 115px;
+    left: 257.5px;
+    border-radius: 50%;
+    color: #120942;
+    background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 
+                inset 0 0 8px rgba(255, 255, 255, 0.6);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Button Hover Effect */
+.frame:hover #button_open_envelope {
+    transform: scale(1.12) rotate(15deg);
+    box-shadow: 0 0 25px #fcf6ba, 0 8px 25px rgba(0, 0, 0, 0.4);
+    color: #000000;
+}
+
+/* Envelope Flaps /
+.left, .right, .top {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    z-index: 310;
+}
+
+.left {
+    border-left: 300px solid #3d0a12; /* Dark Maroon Shadow Effect */
+    border-top: 175px solid transparent;
+    border-bottom: 175px solid transparent;
+    border-radius: 0 0 0 35px;
+}
+
+.right {
+    border-right: 300px solid #3d0a12;
+    border-top: 175px solid transparent;
+    border-bottom: 175px solid transparent;
+    left: 300px;
+    border-radius: 0 0 35px 0;
+}
+
+.top {
+    border-right: 300px solid transparent;
+    border-top: 185px solid #5c121d; 
+    border-left: 300px solid transparent;
+    transition: transform 0.8s ease-in-out;
+    transform-origin: top;
+    transform: rotateX(0deg);
+    z-index: 500;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
+}
+
+/* When Envelope Opens */
+.frame.open .top {
+    transform: rotateX(180deg);
+    z-index: 200;
+}
+
+/* Bottom Inside Part */
+.bottom {
+    width: 600px;
+    height: 190px;
+    position: absolute;
+    background: #31070e;
+    top: 160px;
+    border-radius: 0 0 35px 35px;
+    z-index: 300;
+    border-bottom: 2px solid #bf953f; 
+}
+
+/* Beautiful Circle Open Button */
+#button_open_envelope {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    z-index: 550;
+    top: 120px;
+    left: 260px;
+    border-radius: 50%;
+    color: #081d3d;
+    background: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #bf953f;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2), inset 0 0 10px rgba(191,149,63,0.3);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.frame:hover #button_open_envelope {
+    transform: scale(1.15) rotate(10deg);
+    background: #fcf6ba;
+    box-shadow: 0 0 20px #fcf6ba;
+}
+
+.left, .right, .top {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    z-index: 310;
+}
+
+.left {
+    border-left: 300px solid #081d3d;
+    border-top: 175px solid transparent;
+    border-bottom: 175px solid transparent;
+    border-radius: 0 0 0 40px;
+}
+
+.right {
+    border-right: 300px solid #081d3d;
+    border-top: 175px solid transparent;
+    border-bottom: 175px solid transparent;
+    left: 300px;
+    border-radius: 0 0 40px 0;
+}
+
+.top {
+    border-right: 300px solid transparent;
+    border-top: 185px solid #193e6e;
+    border-left: 300px solid transparent;
+    transition: transform 0.8s ease-in-out;
+    transform-origin: top;
+    transform: rotateX(0deg);
+    z-index: 500;
+}
+
+/* When Envelope Opens */
+.frame.open .top {
+    transform: rotateX(180deg);
+    z-index: 200;
+}
+
+.bottom {
+    width: 600px;
+    height: 190px;
+    position: absolute;
+    background: #072247;
+    top: 160px;
+    border-radius: 0 0 40px 40px;
+    z-index: 300;
+}
+
+
+/* --- FULL SCREEN CARD OVERLAY --- */
+.card-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+    padding: 20px;
+}
+
+.card-overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* --- WEDDING CARD PREMIUM CONTAINER --- */
+.card-container {
+    background: rgba(255, 255, 255, 0.95); 
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 25px 0;
+    border: 3px solid transparent;
+    border-image: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%) 1;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+    transform: scale(0.5) translateY(100px);
+    transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.card-overlay.show .card-container {
+    transform: scale(1) translateY(0);
+}
+
+/* Petals Falling Area */
+.petals-inside-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.rose-petal {
+    position: absolute;
+    top: -20px;
+    border-radius: 50% 0 50% 50%;
+    opacity: 0.4;
+    animation: petalFall linear infinite;
+}
+
+@keyframes petalFall {
+    0% {
+        top: -30px;
+        transform: translateX(0) rotate(0deg) scale(1);
+        opacity: 0;
+    }
+    10% { opacity: 0.5; }
+    90% { opacity: 0.5; }
+    100% {
+        top: 102%;
+        transform: translateX(60px) rotate(450deg) scale(0.8);
+        opacity: 0;
+    }
+}
+
+/* Botanical Elements */
+.top-leaves-banner, .bottom-leaves-banner {
+    position: absolute;
+    width: 100%;
+    height: 150px;
+    pointer-events: none;
+    z-index: 2;
+}
+.top-leaves-banner { top: 0; left: 0; }
+.bottom-leaves-banner { bottom: 0; left: 0; height: 110px; }
+
+.leaf-element {
+    position: absolute;
+    border-radius: 0 100% 0 100%;
+    transform: rotate(-45deg);
+    opacity: 0.22;
+}
+
+.l1 { width: 180px; height: 90px; background: linear-gradient(to right, #2d5a27, #4f7942); top: -20px; left: -10px; }
+.l2 { width: 140px; height: 70px; background: linear-gradient(to right, #1b4d3e, #5c8b57); top: -10px; right: -20px; transform: rotate(45deg); }
+.l3 { width: 220px; height: 110px; background: linear-gradient(to bottom, #3b7a57, transparent); top: -40px; left: 30%; transform: rotate(15deg); }
+.b1 { width: 160px; height: 80px; background: linear-gradient(to right, #2d5a27, #6082b6); bottom: -10px; left: -30px; transform: rotate(30deg); }
+.b2 { width: 150px; height: 75px; background: linear-gradient(to left, #1b4d3e, #4f7942); bottom: -20px; right: -10px; transform: rotate(-30deg); }
+
+/* Card Content Details */
+.card-body {
+    position: relative;
+    z-index: 3;
+    padding: 40px 35px 20px 35px;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 13px;
+    font-style: italic;
+    color: #555555;
+    margin-bottom: 8px;
+}
+
+.main-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 58px;
+    color: #274e13;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.main-names .ampersand {
+    font-size: 36px;
+    color: #4f7942;
+}
+
+.bold-caps-text {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #111111;
+}
+
+.horizontal-divider {
+    width: 180px;
+    height: 1px;
+    background-color: #333333;
+    margin: 15px auto;
+    opacity: 0.5;
+}
+
+.blessing-message {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.7;
+    color: #222222;
+    margin-bottom: 30px;
+}
+
+.split-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    gap: 15px;
+}
+
+.illustration-box {
+    width: 46%;
+    display: flex;
+    justify-content: center;
+}
+
+.traditional-frame {
+    width: 100%;
+    max-width: 200px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(230, 230, 230, 0.5);
+}
+
+.couple-img {
+    width: 103%;
+    height: 103%;
+    object-fit: cover;
+    transform: translate(-1.5%, -1.5%);
+}
+
+.details-box {
+    width: 52%;
+    text-align: center;
+}
+
+.month-header {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #111111;
+    margin-bottom: 3px;
+}
+
+.date-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1.5px solid #222222;
+    border-bottom: 1.5px solid #222222;
+    padding: 8px 0;
+    margin-bottom: 5px;
+}
+
+.grid-day {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+    border-right: 1px solid #888888;
+}
+
+.grid-date {
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0 10px;
+    color: #274e13;
+}
+
+.grid-time {
+    font-size: 10px;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.year-footer {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.location-marker {
+    color: #4f7942;
+}
+
+.venue-main {
+    font-size: 12px;
+    font-weight: 700;
+    color: #111111;
+}
+
+.venue-sub {
+    font-size: 11px;
+    color: #444444;
+    margin-bottom: 12px;
+}
+
+.poruwa-time {
+    font-size: 10px;
+    font-weight: 700;
+    color: #222222;
+}
+
+.rsvp-section {
+    text-align: right;
+    margin-top: 10px;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #333333;
+}
+
+/* Responsiveness for Smaller Screens */
+@media (max-width: 540px) {
+    .frame {
+        width: 90%;
+        height: 250px;
+    }
+    .left, .right { border-top-width: 125px; border-bottom-width: 125px; }
+    .left { border-left-width: 150px; }
+    .right { border-right-width: 150px; left: 150px; }
+    .top { border-right-width: 150px; border-left-width: 150px; border-top-width: 125px; }
+    #button_open_envelope { left: calc(50% - 40px); top: 80px; }
+
+    .split-section {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .illustration-box, .details-box { width: 100%; }
+    .rsvp-section { text-align: center; margin-top: 20px; }
+    .main-names { font-size: 46px; }
+}
