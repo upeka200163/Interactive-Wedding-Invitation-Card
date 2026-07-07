@@ -72,13 +72,13 @@ Optimized for:
 
 ## 🎨 Design Highlights
 
-✨ Premium Luxury Theme
-✨ Elegant Envelope Opening Animation
-✨ Glassmorphism Invitation Card
-✨ Smooth Interactive Animations
-✨ Botanical Floral Decorations
-✨ Mobile-First Responsive Design
-✨ Modern User Experience (UX)
+✨ Premium Luxury Theme<br />
+✨ Elegant Envelope Opening Animation<br />
+✨ Glassmorphism Invitation Card<br />
+✨ Smooth Interactive Animations<br />
+✨ Botanical Floral Decorations<br />
+✨ Mobile-First Responsive Design<br />
+✨ Modern User Experience (UX)<br />
 
 ---
 
