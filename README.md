@@ -8,7 +8,7 @@ Interactive Premium Wedding Invitation is a modern, responsive digital wedding i
 
 ## 🌍 Live Demo
 
-🔗 **Live Preview:** https://your-live-demo-link.com
+🔗 **Live Preview:** https://upeka200163.github.io/Interactive-Wedding-Invitation-Card/
 
 ---
 
