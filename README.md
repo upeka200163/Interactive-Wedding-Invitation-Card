@@ -102,7 +102,7 @@ Interactive-Wedding-Invitation/
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/interactive-premium-wedding-invitation.git
+git clone : https://github.com/upeka200163/Interactive-Wedding-Invitation-Card.git
 
 ```
 
